@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     friends = Friend.get_all()
     print(friends)
-    return render_template("index.html")
+    return render_template("index.html", friends=friends)
 
 
 if __name__ == "__main__":
